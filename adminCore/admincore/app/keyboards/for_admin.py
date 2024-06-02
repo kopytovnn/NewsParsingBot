@@ -21,3 +21,9 @@ def get_kb_premium():
     ]
     keyboard = types.InlineKeyboardMarkup(inline_keyboard=buttons)
     return keyboard
+
+
+def get_kb_users(users):
+    buttons = [[types.InlineKeyboardButton(text=str(user_id), callback_data=f"user_{user_id}") for user_id in users]]
+    keyboard = types.InlineKeyboardMarkup(inline_keyboard=buttons)
+    return keyboard
