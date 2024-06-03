@@ -6,7 +6,7 @@ from aiogram.fsm.storage.memory import MemoryStorage
 
 from config import TOKEN
 
-from app.handlers import common, edituser
+from app.handlers import common, edituser, allusers
 
 
 async def main():
@@ -20,6 +20,7 @@ async def main():
     dp = Dispatcher(storage=MemoryStorage())
 
     dp.include_router(common.router)
+    dp.include_router(allusers.router)
     dp.include_router(edituser.router)
 
     await dp.start_polling(bot)

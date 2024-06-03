@@ -4,7 +4,7 @@ from aiogram.fsm.context import FSMContext
 
 from ..keyboards.for_admin import get_kb_start
 
-from ..handlers.edituser import users
+from ..handlers.allusers import users
 
 router = Router()
 
